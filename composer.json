@@ -1,11 +1,11 @@
 {
-    "name": "vixplanc/padrao-inicial",
+    "name": "vixplanc/base-padrao",
     "description": "Padrão inicial com o basico de todos os sistemas , com autenticação sistema de cargos, auxilio para upload, download de arquivos, tratamento de arquivos excel entre outros recursos",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Vixplanc\\PadraoInicial\\": "src/"
+            "Vixplanc\\BasePadrao\\": "src/"
         }
     },
     "authors": [
