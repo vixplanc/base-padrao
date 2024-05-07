@@ -1,5 +1,5 @@
 <?php
-namespace vixplanc\BasePadrao\Traits;
+namespace Vixplanc\BasePadrao\Traits;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\LazyCollection;
