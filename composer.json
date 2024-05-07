@@ -1,0 +1,32 @@
+{
+    "name": "vixplanc/padrao-inicial",
+    "description": "Padrão inicial com o basico de todos os sistemas , com autenticação sistema de cargos, auxilio para upload, download de arquivos, tratamento de arquivos excel entre outros recursos",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vixplanc\\PadraoInicial\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vicemanu",
+            "email": "victor_mielke@outlook.com"
+        },
+        {
+            "name": "juniorjrml",
+            "email": "jancarlolcj@gmail.com"
+        }
+    ],
+    "require": {
+        "php-flasher/flasher-laravel": "^1.15",
+        "spatie/laravel-activitylog": "^4.8",
+        "spatie/laravel-permission": "^6.7",
+        "spatie/simple-excel": "^3.6"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.13"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
