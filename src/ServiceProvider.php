@@ -2,10 +2,9 @@
 
 namespace Vixplanc\BasePadrao;
 
-// use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class ServiceProvider extends BaseServiceProvider
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
      * Register services.
