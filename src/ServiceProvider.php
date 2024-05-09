@@ -19,22 +19,23 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function boot(): void
     {
-        // $this->loadTranslationsFrom(realpath('').'/vendor/vixplanc/base-padrao/src/lang', 'vixplanc');
-        // $this->loadViewsFrom(realpath('').'/vendor/vixplanc/base-padrao/src/resources', 'vixplanc');
-        $this->loadRoutesFrom(realpath('').'/vendor/vixplanc/base-padrao/src/routes/web.php');
-        $this->loadMigrationsFrom(realpath('').'/vendor/vixplanc/base-padrao/src/database/migrations');
+        $this->loadRoutesFrom($this->app->basePath().'/vendor/vixplanc/base-padrao/src/routes/web.php');
+        $this->loadMigrationsFrom($this->app->basePath().'/vendor/vixplanc/base-padrao/src/database/migrations');
         $this->publishes([
-            realpath('').'/vendor/vixplanc/base-padrao/src/lang' => $this->app->langPath(),
+            $this->app->basePath().'/vendor/vixplanc/base-padrao/src/lang' => $this->app->langPath(),
         ]);
         $this->publishes([
-            realpath('').'/vendor/vixplanc/base-padrao/src/resources' => $this->app->resourcePath(),
+            $this->app->basePath().'/vendor/vixplanc/base-padrao/src/resources' => $this->app->resourcePath(),
         ]);
 
         $this->publishes([
-            realpath('').'/vendor/vixplanc/base-padrao/src/public' => $this->app->publicPath(),
+            $this->app->basePath().'/vendor/vixplanc/base-padrao/src/public' => $this->app->publicPath(),
         ]);
         $this->publishes([
-            realpath('').'/vendor/vixplanc/base-padrao/src/storage' => $this->app->storagePath(),
+            $this->app->basePath().'/vendor/vixplanc/base-padrao/src/storage' => $this->app->storagePath(),
+        ]);
+        $this->publishes([
+            $this->app->basePath().'/vendor/vixplanc/base-padrao/src/database' => $this->app->databasePath(),
         ]);
     }
 }
