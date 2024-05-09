@@ -2,6 +2,7 @@
 
 namespace Vixplanc\BasePadrao\Controllers;
 
+
 use Vixplanc\BasePadrao\Traits\FileHandler;
 use App\Http\Controllers\Controller;
 use Vixplanc\Models\User;
