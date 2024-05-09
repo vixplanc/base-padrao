@@ -1,12 +1,9 @@
 <?php
 
-use Vixplancon\Http\Controllers\AdministradorController;
-use Vixplancon\Http\Controllers\DashboardController;
-use Vixplancon\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
+use Vixplanc\BasePadrao\Controllers\AdministradorController;
+use Vixplanc\BasePadrao\Controllers\DashboardController;
+use Vixplanc\BasePadrao\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +18,6 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     return redirect()->route('dashboard');
-    // return Inertia::render('Welcome', [
-    //     'canLogin' => Route::has('login'),
-    //     'canRegister' => Route::has('register'),
-    //     'laravelVersion' => Application::VERSION,
-    //     'phpVersion' => PHP_VERSION,
-    // ]);
 });
 
 
@@ -52,6 +43,3 @@ Route::middleware('auth')->group(function () {
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-require __DIR__.'/auth.php';
