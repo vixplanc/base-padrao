@@ -32,5 +32,12 @@
         "barryvdh/laravel-debugbar": "^3.13"
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vixplanc\\BasePadrao\\ServiceProvider"
+            ]
+        }
+    }
 }
