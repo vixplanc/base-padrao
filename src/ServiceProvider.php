@@ -37,5 +37,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             $this->app->basePath().'/vendor/vixplanc/base-padrao/src/database' => $this->app->databasePath(),
         ]);
+        $this->publishes([
+            $this->app->basePath().'/vendor/vixplanc/base-padrao/src/Middleware' => $this->app->basePath().'/app/Http/Middleware',
+        ]);
     }
 }
