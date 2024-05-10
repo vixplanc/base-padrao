@@ -3,9 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Database\Factories\UserFactory;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
-use Vixplanc\Models\User;
+use Vixplanc\BasePadrao\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,7 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $dev1 = User::factory()->create(
+        $userFactory = new UserFactory();
+        $dev1 = $userFactory->create(
             [
                 'name' => '55006396',
                 'email' => 'jancarlolcj@example.com',
@@ -23,7 +26,7 @@ class DatabaseSeeder extends Seeder
                 // 'isAdmin' => 1,
             ],
         );
-        $dev2 = User::factory()->create(
+        $dev2 = $userFactory->create(
             [
                 'name' => '55017168',
                 'email' => 'VictorMielke@example.com',
@@ -35,7 +38,7 @@ class DatabaseSeeder extends Seeder
         $count = $n_users;
         $users = [];
         while($count > 0){
-            $users[] = User::factory()->create(
+            $users[] = $userFactory->create(
                 [
                     'name' => fake()->name(),
                     'email' => fake()->email(),
