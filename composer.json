@@ -30,31 +30,7 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.13"
     },
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --force"
-        ],
-        "post-inertia-install": [
-            "@composer require inertiajs/inertia-laravel",
-            "@php artisan inertia:middleware"
-        ]
-        ,
-        "post-laravel-breeze-install": [
-            "@composer require laravel/breeze --dev",
-            "@php artisan breeze:install"
-        ]
-        ,
-        "post-root-package-install": [
-            "@composer require php-flasher/flasher-laravel",
-            "@composer require spatie/laravel-activitylog",
-            "@composer require spatie/laravel-permission",
-            "@composer require spatie/simple-excel"
-        ]
-    },
+
     "minimum-stability": "stable",
     "prefer-stable": true,
     "extra": {
